@@ -21,10 +21,10 @@ interface Experience {
 export class ExperienceComponent {
   experience: Experience[] = [
     {
-      company: 'Nombre de la Empresa o Freelance',
-      position: 'Software Developer',
-      period: 'Ene 2024 - Presente',
-      description: 'Desarrollo de soluciones Full Stack enfocadas en la experiencia de usuario y escalabilidad.',
+      company: 'Gobierno de la Ciudad de Buenos Aires (Ministerio de Educación)',
+      position: 'Profesor Técnico',
+      period: 'Marzo 2013 - Presente',
+      description: 'Responsable de la formación y dirección técnica de alumnos, traduciendo conceptos complejos de lógica en soluciones prácticas y funcionales mediante el uso de tecnologías como C++ y Arduino.',
       achievements: [
         'Liderazgo de equipos: Coordinación y guía de grupos de estudiantes en el desarrollo de proyectos técnicos integrales, fomentando metodologías de trabajo colaborativo y comunicación efectiva.',
         'Mentoría técnica: Simplificación y transmisión de conceptos complejos de programación, lógica y electrónica para perfiles no técnicos, asegurando la comprensión y aplicación práctica de los mismos.',
