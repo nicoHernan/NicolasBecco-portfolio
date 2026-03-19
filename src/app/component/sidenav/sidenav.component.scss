@@ -1,0 +1,122 @@
+.sidenav-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.sidenav {
+  width: 280px; 
+  background-color: #f8f9fa;
+  color: #e0e0e0; 
+  border-right: none;
+
+  .sidenav-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px 0;
+  }
+}
+
+.profile-section {
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 1px solid rgba(0, 55, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .profile-name {
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    color: #1a1a1a;    
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+  }
+
+   .profile-description {
+    font-size: 0.95rem;  
+    font-weight: 400;   
+    color: #5f6368;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+}
+
+.nav-links {
+  margin-top: 20px;
+
+  .nav-item {
+    margin: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+
+   
+    .nav-text {
+      color: #555;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-icon {
+      color: #777;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    &:hover {
+      background-color: rgba(25, 118, 210, 0.1); 
+
+      .nav-text, .nav-icon {
+        color: #1976d2; 
+      }
+
+      .nav-icon {
+        transform: translateX(4px);
+      }
+    }
+  }
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+
+  a {
+    color: #5f6368;
+    transition: transform 0.2s, color 0.2s;
+
+    &:hover {
+      color: #1976d2;
+      transform: translateY(-3px) scale(1.1);
+    }
+  }
+}
+
+.main-content {
+  padding: 0;
+  background-color: white;
+
+  section {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+}

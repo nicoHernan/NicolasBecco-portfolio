@@ -1,0 +1,31 @@
+<div class="project-container">
+  <div class="project-card" *ngFor="let project of currentProject">
+    
+    <h3>{{ project.title }}</h3>
+    
+    <p class="tech-stack">
+      <strong>{{ project.stack }}</strong>
+    </p>
+    
+    <div class="thumbnail-container">
+      <img 
+      [src]="project.imgUrl" 
+      [alt]="project.title" 
+      class="project-img"
+      (click) = "openProjectImage(project.imgUrl)"
+      title="click para ampliar"
+      >
+    </div>
+
+    <p class="description">
+      {{ project.description }}
+    </p>
+    
+    <div class="project-action">
+      <a [href]="project.githubUrl" target="_blank" mat-button color="primary">
+        Ver en GitHub
+      </a>
+    </div>
+
+  </div>
+</div>
