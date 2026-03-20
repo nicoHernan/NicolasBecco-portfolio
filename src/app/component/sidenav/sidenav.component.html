@@ -1,6 +1,11 @@
 <mat-sidenav-container class="sidenav-container">
-  
-  <mat-sidenav mode= "side" opened class= "sidenav">
+
+  <mat-sidenav #drawer 
+               class="sidenav"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false"
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'">
+
     <div class="sidenav-wrapper">
       
       <div class= "profile-section">
@@ -46,6 +51,14 @@
   </mat-sidenav>
 
   <mat-sidenav-content class="main-content">
+    <button type="button" 
+            mat-icon-button 
+            class="menu-button" 
+            *ngIf="isHandset$ | async" 
+            (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
     <section id="about">
       <app-about></app-about>
     </section>

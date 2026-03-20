@@ -18,7 +18,7 @@ export class ProjectService{
             title: 'BrevismoNews',
             stack:'Angular • Angular Material • Gemini AI • Amadeus API • Supabase Auth • Firebase Auth',
             description: 'Brevísimo News: App de noticias en tiempo real nativa con Jetpack Compose y News API. Navegación adaptativa, integración con Gemini AI, Firebase Auth y Supabase. Arquitectura limpia y M3',
-            imgUrl: 'image/flyStackapp_mockup_img.png',
+            imgUrl: 'image/BrevisimoNewsapp_mockup_img.png',
             githubUrl: 'https://github.com/nicoHernan/BrevisimoNews-app.git'
         }
     ] ;

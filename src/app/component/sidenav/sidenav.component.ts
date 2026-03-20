@@ -10,6 +10,9 @@ import { ImageDialogComponent } from "../../image-dialog/image-dialog.component"
 import { AboutComponent } from "../about/about.component";
 import { ExperienceComponent } from "../experience/experience.component";
 import { ProjectComponent } from "../project/project.component";
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import { Observable } from "rxjs";
+import { map, shareReplay } from "rxjs";
 
 @Component({
   selector: 'app-sidenav',
@@ -31,7 +34,14 @@ import { ProjectComponent } from "../project/project.component";
 })
 
 export class SidenavComponent {
+  private breakpointObserver = inject(BreakpointObserver);
   private dialog = inject(MatDialog) ;
+
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
   openProfileImage(): void {
     this.dialog.open(ImageDialogComponent, {
