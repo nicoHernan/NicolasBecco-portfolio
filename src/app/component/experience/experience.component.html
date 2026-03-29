@@ -1,28 +1,29 @@
 <div class="experience-container">
-  <h2 class="section-title">Trayectoria Profesional</h2>
-
+  <h2 class="section-title">{{STRINGS.EXPERIENCE.TITLE}}</h2>
   <div class="timeline">
-    <div class="timeline-item" *ngFor="let exp of experience">
-      
-      <div class="timeline-marker"></div>
-      
+    <div
+      class="timeline-item" 
+      *ngFor="let experience of STRINGS.EXPERIENCE.DETAIL">
+      <div class="timeline-marker">
+      </div> 
       <div class="timeline-content">
         <div class="header">
-          <h3 class="position">{{ exp.position }}</h3>
-          <span class="period">{{ exp.period }}</span>
+        <h3
+        class="position">
+          {{ experience.POSITION }}
+        </h3>
+        <span
+        class="period">{{ experience.PERIOD }}
+        </span>
         </div>
-        
-        <h4 class="company">{{ exp.company }}</h4>
-        
-        <p class="description">{{ exp.description }}</p>
-
+        <h4 class="company">{{ experience.COMPANY }}</h4>
+        <p class="description">{{ experience.DESCRIPTION }}</p>
         <ul class="achievements-list">
-          <li *ngFor="let achievement of exp.achievements">
+          <li *ngFor="let achievement of experience.ACHIEVEMENTS">
             {{ achievement }}
           </li>
         </ul>
       </div>
-
     </div>
   </div>
 </div>

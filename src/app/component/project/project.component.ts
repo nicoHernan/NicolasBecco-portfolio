@@ -1,8 +1,9 @@
 import { CommonModule } from "@angular/common";
 import { Component, inject, OnInit } from "@angular/core";
 import { ProjectService } from "../../service/project.service";
-import { ImageDialogComponent } from "../../image-dialog/image-dialog.component";
+import { ImageDialogComponent } from "../image-dialog/image-dialog.component";
 import { MatDialog, MatDialogModule } from "@angular/material/dialog";
+import { PROJECT } from "../../util/project-data";
 
 @Component({
   selector: 'app-project',

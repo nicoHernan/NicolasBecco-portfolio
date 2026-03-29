@@ -1,19 +1,30 @@
 <section class="about-container">
   <div class="content-wrapper">
-    <h1 class="greeting">Hola, soy <span class="highlight">Nicolás Hernán Becco</span></h1>
-    <h2 class="role">{{ title }}</h2>
+    <h1 class="greeting">{{STRINGS.ABOUT.GREATING}}
+      <span class="highlight">Nicolás Hernán Becco</span></h1>
+    <h2 class="role">{{ STRINGS.ABOUT.TITLE }}</h2>
     
     <div class="description-text">
-      <p>{{ description }}</p>
-      <p>{{ detail }}</p>
+      <p>{{ STRINGS.ABOUT.DESCRIPTION }}</p>
+      <p>{{ STRINGS.ABOUT.DETAIL }}</p>
     </div>
 
-    <div class="skill-section">
-      <h3>Mis Tecnologías Core</h3>
-      <div class="skill-grid">
-        <div class="skill-tag" *ngFor="let skill of skill">
-          <span>{{ skill.name }}</span>
-        </div>
+    <div 
+      class="skill-section"
+    >
+      <h3>
+        Mi Stack Tecnológico
+      </h3>
+      <div 
+        class="skill-grid"
+      >
+      <div 
+        class="skill-tag" 
+        *ngFor="let skill of STRINGS.ABOUT.SKILL">
+        <span>
+          {{skill.name}}
+        </span>
+      </div>
       </div>
     </div>
   </div>

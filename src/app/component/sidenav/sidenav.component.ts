@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from "@angular/material/divider";
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { ImageDialogComponent } from "../../image-dialog/image-dialog.component";
+import { ImageDialogComponent } from "../image-dialog/image-dialog.component";
 import { AboutComponent } from "../about/about.component";
 import { ExperienceComponent } from "../experience/experience.component";
 import { ProjectComponent } from "../project/project.component";
