@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from "@angular/material/divider";
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ImageDialogComponent } from "../image-dialog/image-dialog.component";
 import { AboutComponent } from "../about/about.component";
 import { ExperienceComponent } from "../experience/experience.component";
@@ -13,6 +14,7 @@ import { ProjectComponent } from "../project/project.component";
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import { Observable } from "rxjs";
 import { map, shareReplay } from "rxjs";
+
 
 @Component({
   selector: 'app-sidenav',
@@ -25,6 +27,7 @@ import { map, shareReplay } from "rxjs";
     MatIconModule,
     MatDividerModule,
     MatDialogModule,
+    MatToolbarModule,
     AboutComponent,
     ExperienceComponent,
     ProjectComponent

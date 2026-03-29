@@ -1,79 +1,80 @@
+<mat-toolbar color="primary" class="main-header">
+  <span class="logo" (click)="scrollTo('about')">BN</span>
+  
+  <span class="spacer"></span>
+
+  <div class="nav-menu" *ngIf="!(isHandset$ | async)">
+    <button mat-button (click)="scrollTo('about')">Acerca de</button>
+    <button mat-button (click)="scrollTo('experience')">Experiencia</button>
+    <button mat-button (click)="scrollTo('project')">Proyectos</button>
+  </div>
+
+  <button mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
 <mat-sidenav-container class="sidenav-container">
-
+  
   <mat-sidenav #drawer 
-               class="sidenav"
-               [mode]="(isHandset$ | async) ? 'over' : 'side'"
-               [opened]="(isHandset$ | async) === false"
-               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'">
-
-    <div class="sidenav-wrapper">
-      
-      <div class= "profile-section">
-        <img 
-          src= "image/Foto_Becco_Nicolas_Desarrollador_Software.png" 
-          alt= "Foto de perfil" 
-          class= "profile-img"
-          (click) = "openProfileImage()"  
-        >
-        <h2 class= "profile-name"> Becco Nicolás Hernán </h2>
-        <h2 class= "profile-description">Full Stack Developer 🧑‍💻| Mobile Developer 📱| Android 👽| Angular | 🔥Kotlin & Jetpack Compose | Software Developer Student 🎓| Professor </h2>
-      </div>
-
-      <mat-nav-list class="nav-links">
-        <a mat-list-item (click)="scrollTo('about')" class="nav-item">
-        <mat-icon matListItemIcon class="nav-icon">person</mat-icon>
-        <span matListItemTitle class="nav-text">Acerca de...</span>
-        </a>
-
-        <a mat-list-item (click)="scrollTo('experience')" class="nav-item">
-        <mat-icon matListItemIcon class="nav-icon">work</mat-icon>
-        <span matListItemTitle class="nav-text">Experiencia</span>
-        </a>
-
-        <a mat-list-item (click)="scrollTo('project')" class="nav-item">
-        <mat-icon matListItemIcon class="nav-icon">code</mat-icon>
-        <span matListItemTitle class="nav-text">Proyectos</span>
-        </a>
-      </mat-nav-list>
-
-      <div class="social-footer">
-        <a mat-icon-button href="https://linkedin.com/in/nicolas-becco-3bbb1b60" target="_blank" aria-label="LinkedIn">
-          <mat-icon>link</mat-icon> </a>
-        <a mat-icon-button href="https://github.com/nicoHernan" target="_blank" aria-label="GitHub">
-          <mat-icon>terminal</mat-icon>
-        </a>
-        <a mat-icon-button href="https://instagram.com/nicohernanok" target="_blank" aria-label="Instagram">
-          <mat-icon> photo_camera</mat-icon>
-        </a>
-      </div>
-      
+               class="sidenav" 
+               fixedInViewport
+               [mode]="'over'" 
+               [opened]="false">
+    
+    <div class="profile-section-mobile">
+      <img src="image/Foto_Becco_Nicolas_Desarrollador_Software.png" class="profile-img-small">
+      <p>Nicolás Becco</p>
     </div>
+
+    <mat-nav-list>
+      <a mat-list-item (click)="scrollTo('about'); drawer.close()">Acerca de</a>
+      <a mat-list-item (click)="scrollTo('experience'); drawer.close()">Experiencia</a>
+      <a mat-list-item (click)="scrollTo('project'); drawer.close()">Proyectos</a>
+    </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content class="main-content">
-    <button type="button" 
-            mat-icon-button 
-            class="menu-button" 
-            *ngIf="isHandset$ | async" 
-            (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
     
-    <section id="about">
+    <section id="about" class="hero">
+      <div class="profile-info">
+        <img 
+          src="image/Foto_Becco_Nicolas_Desarrollador_Software.png" 
+          alt="Foto de perfil" 
+          class="main-profile-img"
+          (click)="openProfileImage()">
+        <h1 class="profile-name">Becco Nicolás Hernán</h1>
+        <p class="profile-description">
+          Full Stack Developer 🧑‍💻| Mobile Developer 📱| Android 👽| Angular | Software Developer Student 🎓| Professor
+        </p>
+        
+        <div class="social-links">
+          <a mat-icon-button href="https://linkedin.com/in/nicolas-becco-3bbb1b60" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a mat-icon-button href="https://github.com/nicoHernan" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+          </a>
+          <a mat-icon-button href="https://instagram.com/nicohernanok" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      
       <app-about></app-about>
     </section>
-    
+
     <mat-divider></mat-divider>
-    
+
     <section id="experience">
       <app-experience></app-experience>
     </section>
-    
+
     <mat-divider></mat-divider>
-    
+
     <section id="project">
       <app-project></app-project>
     </section>
+    
   </mat-sidenav-content>
-
 </mat-sidenav-container>
