@@ -1,80 +1,57 @@
 <mat-toolbar color="primary" class="main-header">
-  <span class="logo" (click)="scrollTo('about')">BN</span>
+  <span class="logo" (click)="scrollTo('about')">BNH</span>
   
   <span class="spacer"></span>
 
-  <div class="nav-menu" *ngIf="!(isHandset$ | async)">
+  <div class="nav-menu">
     <button mat-button (click)="scrollTo('about')">Acerca de</button>
     <button mat-button (click)="scrollTo('experience')">Experiencia</button>
     <button mat-button (click)="scrollTo('project')">Proyectos</button>
   </div>
-
-  <button mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
-    <mat-icon>menu</mat-icon>
-  </button>
 </mat-toolbar>
 
-<mat-sidenav-container class="sidenav-container">
+<main class="main-content">
   
-  <mat-sidenav #drawer 
-               class="sidenav" 
-               fixedInViewport
-               [mode]="'over'" 
-               [opened]="false">
-    
-    <div class="profile-section-mobile">
-      <img src="image/Foto_Becco_Nicolas_Desarrollador_Software.png" class="profile-img-small">
-      <p>Nicolás Becco</p>
-    </div>
-
-    <mat-nav-list>
-      <a mat-list-item (click)="scrollTo('about'); drawer.close()">Acerca de</a>
-      <a mat-list-item (click)="scrollTo('experience'); drawer.close()">Experiencia</a>
-      <a mat-list-item (click)="scrollTo('project'); drawer.close()">Proyectos</a>
-    </mat-nav-list>
-  </mat-sidenav>
-
-  <mat-sidenav-content class="main-content">
-    
-    <section id="about" class="hero main-gradient-bg">
-      <div class="profile-info">
-        <img 
-          src="image/Foto_Becco_Nicolas_Desarrollador_Software.png" 
-          alt="Foto de perfil" 
-          class="main-profile-img"
-          (click)="openProfileImage()">
-        <h1 class="profile-name">Becco Nicolás Hernán</h1>
-        <p class="profile-description muted-text">
-          Full Stack Developer 🧑‍💻| Mobile Developer 📱| Android 👽| Angular | Software Developer Student 🎓| Professor
-        </p>
+  <section id="about" class="hero main-gradient-bg">
+    <div class="profile-info">
+      <img 
+        src="image/Foto_Becco_Nicolas_Desarrollador_Software.png" 
+        alt="Foto de perfil" 
+        class="main-profile-img"
+        (click)="openProfileImage()">
         
-        <div class="social-links">
-          <a mat-icon-button href="https://linkedin.com/in/nicolas-becco-3bbb1b60" target="_blank" aria-label="LinkedIn" class="gradient-icon-button">
-          <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a mat-icon-button href="https://github.com/nicoHernan" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-          </a>
-          <a mat-icon-button href="https://instagram.com/nicohernanok" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-      </div>
+      <h1 class="profile-name">Becco Nicolás Hernán</h1>
       
-      <app-about></app-about>
-    </section>
-
-    <mat-divider></mat-divider>
-
-    <section id="experience">
-      <app-experience></app-experience>
-    </section>
-
-    <mat-divider></mat-divider>
-
-    <section id="project">
-      <app-project></app-project>
-    </section>
+      <p class="profile-description muted-text">
+        Full Stack Developer 🧑‍💻| Mobile Developer 📱| Android 👽| Angular | Software Developer Student 🎓| Professor
+      </p>
+      
+      <div class="social-links">
+        <a mat-icon-button href="https://linkedin.com/in/nicolas-becco-3bbb1b60" target="_blank" aria-label="LinkedIn" class="gradient-icon-button">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a mat-icon-button href="https://github.com/nicoHernan" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a mat-icon-button href="https://instagram.com/nicohernanok" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
     
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    <app-about></app-about>
+  </section>
+
+  <mat-divider></mat-divider>
+
+  <section id="experience">
+    <app-experience></app-experience>
+  </section>
+
+  <mat-divider></mat-divider>
+
+  <section id="project">
+    <app-project></app-project>
+  </section>
+  
+</main>

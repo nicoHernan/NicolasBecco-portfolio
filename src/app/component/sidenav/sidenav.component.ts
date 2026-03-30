@@ -11,9 +11,6 @@ import { ImageDialogComponent } from "../image-dialog/image-dialog.component";
 import { AboutComponent } from "../about/about.component";
 import { ExperienceComponent } from "../experience/experience.component";
 import { ProjectComponent } from "../project/project.component";
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import { Observable } from "rxjs";
-import { map, shareReplay } from "rxjs";
 
 
 @Component({
@@ -37,20 +34,13 @@ import { map, shareReplay } from "rxjs";
 })
 
 export class SidenavComponent {
-  private breakpointObserver = inject(BreakpointObserver);
   private dialog = inject(MatDialog) ;
-
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
 
   openProfileImage(): void {
     this.dialog.open(ImageDialogComponent, {
       data: { url: 'image/Foto_Becco_Nicolas_Desarrollador_Software.png' },
       panelClass: 'custom-dialog-container',
-      maxWidth: '95vw',
+      maxWidth: '90vw',
       maxHeight: '95vh'
     });
   }
@@ -58,11 +48,10 @@ export class SidenavComponent {
   scrollTo(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth', 
-        block: 'start',
-        inline: 'nearest'
-      });
+      const yOffset = -70; 
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }
 
