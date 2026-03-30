@@ -1,11 +1,16 @@
 .main-content {
-  padding-top: 64px; 
+  padding-top: 64px;
+  width: 100% !important;
+  margin: 0 !important; 
+  overflow-x: hidden;
   background: var(--main-gradient) !important;
   background-attachment: fixed;
   min-height: 100vh;
 
   section {
-    padding: 100px 10%;
+    padding: 60px 20px !important;
+    width: 100%;
+    box-sizing: border-box;
     min-height: 100vh;
     background: transparent !important; 
   }
@@ -52,7 +57,7 @@
     button {
       margin-left: 10px;
       font-weight: 500;
-      color: #555;
+      color: #ffffff;
       
       &:hover { color: #1976d2; }
     }
