@@ -16,11 +16,12 @@
         class="period">{{ experience.PERIOD }}
         </span>
         </div>
-        <h4 class="company">{{ experience.COMPANY }}</h4>
+        <h4 class="company"><i class="fas fa-building"></i>{{ experience.COMPANY }}</h4>
         <p class="description">{{ experience.DESCRIPTION }}</p>
         <ul class="achievements-list">
           <li *ngFor="let achievement of experience.ACHIEVEMENTS">
-            {{ achievement }}
+            <i [class]="achievement.icon" class="achievement-icon"></i>
+            <span class="achievement-text">{{ achievement.text }}</span>
           </li>
         </ul>
       </div>

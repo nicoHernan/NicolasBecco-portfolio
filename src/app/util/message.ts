@@ -18,23 +18,24 @@ export const COMPONENT_MESSAGE = {
       Además Autenticación híbrida con Firebase Auth (Google/Anónimo) y persistencia con backend as a service. 
       Navegación adaptativa, MVVM y M3.`,
     SKILL: [
-      { name: 'Kotlin'},
-      { name: 'TypeScript'},
-      { name: 'Javascript'},
-      { name: 'C++'},
-      { name: 'SQL'},
-      { name: 'Angular'},
-      { name: 'Android JetpackCompose'},
-      { name: 'React Native'},
-      { name: 'Node.js'},
-      { name: 'Express'},
-      { name: 'Firebase'},
-      { name: 'Supabase'},
-      { name: 'Github'},
-      { name: 'Git'},
-      { name: 'Android Studio'},
-      { name: 'Visual Studio Code'},
-      { name: 'Expo'}
+      { name: 'Kotlin', icon: 'fas fa-code'},
+      { name: 'TypeScript', icon: 'fas fa-scroll'},
+      { name: 'Javascript', icon: 'fab fa-js'},
+      { name: 'C++', icon: 'fas fa-terminal'},
+      { name: 'SQL', icon: 'fas fa-database'},
+      { name: 'Angular', icon: 'fab fa-angular'},
+      { name: 'Android JetpackCompose' , icon: 'fab fa-android'},
+      { name: 'React Native', icon: 'fab fa-react'},
+      { name: 'Node.js', icon: 'fab fa-node-js'},
+      { name: 'Express', icon: 'fas fa-server'},
+      { name: 'Firebase', icon: 'fas fa-fire'},
+      { name: 'Supabase', icon: 'fas fa-bolt'},
+      { name: 'Github', icon: 'fab fa-github'},
+      { name: 'Git', icon: 'fab fa-git-alt'},
+      { name: 'Arduino', icon: 'fas fa-microchip' },
+      { name: 'Android Studio', icon: 'fas fa-laptop-code'},
+      { name: 'Visual Studio Code', icon: 'fas fa-file-code'},
+      { name: 'Expo', icon: 'fas fa-mobile-screen-button'}
     ]
   },
   EXPERIENCE:{
@@ -49,18 +50,10 @@ export const COMPONENT_MESSAGE = {
       `Responsable de la formación y dirección técnica de alumnos, traduciendo conceptos complejos de lógica en soluciones prácticas
       y funcionales mediante el uso de tecnologías como C++ y Arduino.`,
       ACHIEVEMENTS: [
-        `Liderazgo de equipos: 
-        Coordinación y guía de grupos de estudiantes en el desarrollo de proyectos técnicos integrales,
-        fomentando metodologías de trabajo colaborativo y comunicación efectiva.`,
-        `Mentoría técnica: 
-        Simplificación y transmisión de conceptos complejos de programación, lógica y electrónica para perfiles no técnicos,
-        asegurando la comprensión y aplicación práctica de los mismos.`,
-        `Resolución de problemas: 
-        Facilitación de estrategias para el debugging y la resolución de conflictos en el desarrollo de software y
-        hardware (Arduino/C++), orientando a los equipos hacia soluciones creativas y funcionales.`,
-        `Gestión de proyectos con Arduino:
-        Supervisión del ciclo de vida de prototipos electrónicos, desde el diseño de la lógica de programación
-        hasta la implementación física y testeo.`
+        {text:` Liderazgo de equipos: Coordinación de +100 estudiantes en el desarrollo de proyectos técnicos integrales, fomentando metodologías de trabajo colaborativo.`, icon: 'fas fa-rocket'},
+        {text:` Mentoría técnica: Simplificación y transmisión de conceptos complejos de programación lógica y electrónica para perfiles no técnicos, asegurando la comprensión y aplicación práctica de los mismos.`, icon: 'fas fa-check-circle'},
+        {text:` Resolución de problemas: Facilitación de estrategias para el debugging y la resolución de conflictos en el desarrollo de software y hardware (Arduino/C++).`, icon: 'fas fa-check-circle'}, 
+        {text:` Gestión de proyectos con Arduino: Supervisión del ciclo de vida de prototipos electrónicos, desde el diseño de la lógica de programación hasta la implementación física y testeo.` , icon: 'fas fa-check-circle'}
       ]
       }
     ]

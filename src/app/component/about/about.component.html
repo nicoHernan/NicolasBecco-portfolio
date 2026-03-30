@@ -21,6 +21,7 @@
       <div 
         class="skill-tag" 
         *ngFor="let skill of STRINGS.ABOUT.SKILL">
+        <i [class]="skill.icon"></i>
         <span>
           {{skill.name}}
         </span>

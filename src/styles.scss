@@ -41,3 +41,21 @@ section {
 html {
   scroll-behavior: smooth;
 }
+
+:root {
+  --color-lavender: #b39ddb;   
+  --color-periwinkle: #9fa8da; 
+  --color-sky-blue: #81d4fa;   
+  --color-cyan: #4dd0e1;      
+
+  --main-gradient: linear-gradient(
+    to bottom,
+    var(--color-lavender) 0%,
+    var(--color-periwinkle) 35%,
+    var(--color-sky-blue) 70%,
+    var(--color-cyan) 100%
+  );
+  
+  --text-on-gradient: #ffffff; 
+  --text-on-gradient-muted: rgba(255, 255, 255, 0.7);
+}
