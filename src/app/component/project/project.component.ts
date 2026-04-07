@@ -4,11 +4,12 @@ import { ProjectService } from "../../service/project.service";
 import { ImageDialogComponent } from "../image-dialog/image-dialog.component";
 import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 import { PROJECT } from "../../util/project-data";
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,MatIconModule],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })

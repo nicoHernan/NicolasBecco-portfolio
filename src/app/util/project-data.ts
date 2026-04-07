@@ -5,7 +5,8 @@ export const PROJECT = [
     stack: 'Angular • Angular Material • Gemini AI • Amadeus API • Supabase Auth',
     description: `FlyStack ✈️: Gestor de itinerarios con Angular 20+ y Amadeus API...`,
     img: 'image/flyStackapp_mockup_img.png',
-    github: 'https://github.com/nicoHernan/Flystack-app.git'
+    github: 'https://github.com/nicoHernan/Flystack-app.git',
+    youtubeUrl: 'https://youtu.be/6skaSZWIxeI'
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ export const PROJECT = [
     stack: 'Android • Jetpack Compose • Gemini AI • News API • Retrofit',
     description: `Brevísimo News ⚡📰: noticias en tiempo real nativa en Android...`,
     img: 'image/BrevisimoNewsapp_mockup_img.png',
-    github: 'https://github.com/nicoHernan/BrevisimoNews-app.git'
+    github: 'https://github.com/nicoHernan/BrevisimoNews-app.git',
+    youtubeUrl: 'https://youtube.com/shorts/ogjZsJBVKeY?feature=share'
   }
 ];

@@ -84,11 +84,75 @@
 
 .project-action {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
   
   a {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 1px;
   }
+
+  .fa-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px; 
+    border-radius: 50px; 
+    text-decoration: none; 
+    color: white; 
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: inherit; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+
+    i {
+      font-size: 1.1rem; 
+    }
+
+    &:hover {
+      transform: translateY(-2px); 
+    }
+  }
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.github-btn {
+    background-color: #3e4451;
+    border: 1px solid transparent; 
+
+    &:hover {
+      background-color: #333;
+      border-color: #ccc;
+    }
+  }
+
+.youtube-btn {
+    background-color: #55445c;
+    border: 1px solid transparent;
+
+
+    .fab.fa-youtube {
+      color: #ff0000; 
+    }
+
+    &:hover {
+      background-color: #4a3a4e;
+      border-color: rgba(255, 255, 255, 0.2); 
+    }
+  }
+
+.mat-icon {
+  margin-right: 4px;
 }

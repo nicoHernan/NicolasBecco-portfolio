@@ -12,7 +12,6 @@ import { AboutComponent } from "../about/about.component";
 import { ExperienceComponent } from "../experience/experience.component";
 import { ProjectComponent } from "../project/project.component";
 
-
 @Component({
   selector: 'app-sidenav',
   standalone: true, 
