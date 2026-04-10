@@ -11,6 +11,7 @@ import { ImageDialogComponent } from "../image-dialog/image-dialog.component";
 import { AboutComponent } from "../about/about.component";
 import { ExperienceComponent } from "../experience/experience.component";
 import { ProjectComponent } from "../project/project.component";
+import { ContactComponent } from "../contact/contact.component";
 
 @Component({
   selector: 'app-sidenav',
@@ -26,7 +27,8 @@ import { ProjectComponent } from "../project/project.component";
     MatToolbarModule,
     AboutComponent,
     ExperienceComponent,
-    ProjectComponent
+    ProjectComponent,
+    ContactComponent
   ],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'

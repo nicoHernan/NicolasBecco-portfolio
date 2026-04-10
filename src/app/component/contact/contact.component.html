@@ -1,0 +1,20 @@
+<section class="contact-section">
+  <div class="contact-card">
+    <div class="contact-content">
+      <h2>¿Tienes un proyecto en mente?</h2>
+      <p>Estoy disponible para nuevas oportunidades y colaboraciones.</p>
+    </div>
+
+    <div class="contact-actions">
+      <button (click)="enviarMail()" class="fa-btn email-btn">
+        <i class="fas fa-paper-plane"></i>
+        <span>Escríbeme</span>
+      </button>
+
+      <a [href]="cvPath" download="CV_Becco_Nicolas_Desarrollador_Software.pdf" class="fa-btn cv-btn">
+        <i class="fas fa-file-download"></i>
+        <span>Descargar CV</span>
+      </a>
+    </div>
+  </div>
+</section>
